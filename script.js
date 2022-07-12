@@ -21,3 +21,18 @@ console.log(reversString("hellow"))
 //    return newStr
 // }
 //  console.log(reversString('hellow'))
+
+// tack 3
+function factorialize(num){
+    let result = 1
+    if(num == 0) result
+    if(num > 0){
+        for(i = 1 ; i<=num ; i++){
+            result = result * i
+        }
+        return result 
+    }
+    
+}
+console.log(factorialize(10))
+
