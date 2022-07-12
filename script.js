@@ -28,11 +28,11 @@ function factorialize(num){
     if(num == 0) result
     if(num > 0){
         for(i = 1 ; i<=num ; i++){
-            result = result * i
+            result *= i
         }
         return result 
     }
     
 }
-console.log(factorialize(10))
+console.log(factorialize(5))
 
