@@ -36,3 +36,14 @@ function factorialize(num){
 }
 console.log(factorialize(5))
 
+// task 4
+function findLongestWordLength(str) {
+    let strlongest = ''
+    const strArr = str.split(' ')
+    strArr.forEach((item) =>{
+        if( strlongest.length < item.length) strlongest = item
+    })
+    return console.log(strlongest.length)
+  }
+  
+findLongestWordLength("The quick brown jumped fox over the lazy dog")
