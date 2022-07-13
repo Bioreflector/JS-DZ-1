@@ -69,6 +69,11 @@ function confirmEnding(str, target) {
     str.substr(str.length -target.length, target.length) == target ? result =true : result = false
     return console.log(result)
   }
+
+//   function confirmEnding(str, target) {
+//    console.log(str.endsWith(target))
+//   }
  confirmEnding("Bastian", "an")
  confirmEnding("Congratulation", "on")
  confirmEnding("Connor", "n")
+
