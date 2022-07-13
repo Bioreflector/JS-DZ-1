@@ -52,25 +52,13 @@ findLongestWordLength("The quick brown jumped fox over the lazy dog")
 function largestOfFour(arr) {
     const largeNumberArr = []
     arr.forEach((item) =>{
-        let largeNumber = 0
-        item.forEach((itemElements) =>{
-
-            if(largeNumber < itemElements) largeNumber = itemElements
-            
-        })
+        let largeNumber = item.sort((a , b) =>{
+            return a - b
+        })[item.length - 1]
         largeNumberArr.push(largeNumber)
         
     })
+    
     return console.log(largeNumberArr)
   }
-  
   largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]])
-
-
-
-  
-  testArr = [ -10 , -1 , -2 , -5]
-  const sortTestArr = testArr.sort((a , b) =>{
-    return a - b
-  })
-  console.log(sortTestArr)
