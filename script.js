@@ -77,3 +77,16 @@ function confirmEnding(str, target) {
  confirmEnding("Congratulation", "on")
  confirmEnding("Connor", "n")
 
+// task 7 Repeat a String Repeat a String
+
+function repeatStringNumTimes(str, num) {
+   let newStr = ""
+   if(num <= 0) return newStr
+   else{
+    for(let i = 0 ; i < num ; i++){
+        newStr += str
+    }
+   }
+   return console.log(newStr)
+  }
+  repeatStringNumTimes("*", 8);
