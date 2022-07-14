@@ -156,3 +156,20 @@ function booWho(bool) {
   frankenSplice([1, 2], ["a", "b"], 1)
   frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)
   frankenSplice([1, 2, 3, 4], [], 0)
+
+  // task 13 Falsy Bouncer
+  function bouncer(arr) {
+    arr = arr.filter((item) =>{
+      if(item !== "" || item !== false ||
+       item !== null || item !== 0 ||
+       item !== undefined|| item !== NaN){
+        return item
+      }
+    })
+    return console.log(`Task 13 result : ${arr}`)
+    
+  }
+  bouncer([7, "ate", "", false, 9]);
+  bouncer(["a", "b", "c"])
+  bouncer([false, null, 0, NaN, undefined, ""])
+  bouncer([null, NaN, 1, 2, undefined])
