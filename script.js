@@ -142,3 +142,17 @@ function booWho(bool) {
   }
   titleCase("I'm a little tea pot")
   titleCase("sHoRt AnD sToUt")
+
+  // task 12 Slice and Splice
+  function frankenSplice(arr1, arr2, n) {
+    const clonArr2 = arr2.slice(0)
+    for(let i = 0 ; i<arr1.length; i++){
+      clonArr2.splice(n , 0 , arr1[i])
+      n++
+    }
+    return console.log(`Task 12 result : ${clonArr2}`);
+  }
+  frankenSplice([1, 2, 3], [4, 5, 6], 1);
+  frankenSplice([1, 2], ["a", "b"], 1)
+  frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)
+  frankenSplice([1, 2, 3, 4], [], 0)
