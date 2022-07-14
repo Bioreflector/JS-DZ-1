@@ -191,3 +191,22 @@ function booWho(bool) {
   getIndexToIns([5, 3, 20, 3], 5)
   getIndexToIns([40, 60], 50)
   getIndexToIns([3, 10, 5], 3)
+
+  // task 15 Mutations
+  function mutation(arr) {
+    let result
+    const firstStr = arr[0].toLowerCase()
+    const seconStr = arr[1].toLowerCase()
+    for(let i = 0; i < seconStr.length ; i++){
+      if(firstStr.includes(seconStr[i])) result = true
+      else{
+        result = false
+        break
+      } 
+    }
+    return console.log(`Task 15 result : ${result}`)
+  }
+  mutation(["Mary", "Army"]) 
+  mutation(["ate", "date"])
+  mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])
+  mutation(["hello", "hey"])
