@@ -173,3 +173,21 @@ function booWho(bool) {
   bouncer(["a", "b", "c"])
   bouncer([false, null, 0, NaN, undefined, ""])
   bouncer([null, NaN, 1, 2, undefined])
+
+  // task 14 Where do I Belong
+  function getIndexToIns(arr, num) {
+    arr.sort((a , b)=> a-b)
+   for(let i = 0 ; i < arr.length ; i++){
+    if(arr[i] >= num ){
+      num = i
+      break
+    }
+
+   }
+    return console.log(`Task 14 result : ${num}`);
+  }
+  getIndexToIns([10, 20, 30, 40, 50], 35)
+  getIndexToIns([10, 20, 30, 40, 50], 30)
+  getIndexToIns([5, 3, 20, 3], 5)
+  getIndexToIns([40, 60], 50)
+  getIndexToIns([3, 10, 5], 3)
