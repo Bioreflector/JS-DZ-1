@@ -134,4 +134,11 @@ function booWho(bool) {
   booWho(true)
   booWho([1, 2, 3])
 
-
+  // task 11 Title Case a Sentence
+  function titleCase(str) {
+    str = str.toLowerCase()
+    str = str.split(' ').map((item) => item[0].toUpperCase()+item.slice(1)).join(' ')
+    return console.log(`Task 11 result : ${str}`)
+  }
+  titleCase("I'm a little tea pot")
+  titleCase("sHoRt AnD sToUt")
