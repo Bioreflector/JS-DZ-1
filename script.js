@@ -6,7 +6,6 @@ function convertToF(celsius) {
 convertToF(-22);
 
 // task 2 Reverse a String
-
 function reversString(str) {
   return str.split("").reverse().join("");
 }
@@ -83,7 +82,6 @@ confirmEnding("Congratulation", "on");
 confirmEnding("Connor", "n");
 
 // task 7 Repeat a String Repeat a String
-
 function repeatStringNumTimes(str, num) {
   let newStr = "";
   if (num <= 0) return newStr;
@@ -98,11 +96,31 @@ repeatStringNumTimes("*", 8);
 
 // task 8 Truncate a String
 function truncateString(str, num) {
-    if(str.length > num){
-        return console.log(`${str.slice(0 ,num)}...`)
-    }
-    else{
-        return console.log(`${str.slice(0 ,num)}`)
+  if (str.length > num) {
+    return console.log(`${str.slice(0, num)}...`);
+  } else {
+    return console.log(`${str.slice(0, num)}`);
+  }
+}
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+// task 9 Finders Keepers
+function findElement(arr, func) {
+  let num = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (func(arr[i])) {
+      num = arr[i];
+      break;
+    } else {
+      num = undefined;
     }
   }
-  truncateString("A-tisket a-tasket A green and yellow basket", 8)
+  return console.log(num);
+}
+findElement([1, 3, 5, 8, 9, 10], function (num) {
+  return num % 2 === 0;
+});
+findElement([1, 3, 5, 9], function (num) {
+  return num % 2 === 0;
+});
+
